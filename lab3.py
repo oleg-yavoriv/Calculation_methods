@@ -80,7 +80,7 @@ def run_analysis():
         variances.append(var)
         print(f"Степінь m={m}: Дисперсія = {var:.4f}")
 
-    optimal_m = np.argmin(variances) + 1
+    optimal_m = np.argmin(variances) -5
     print(f"\n=> Оптимальний степінь многочлена: m = {optimal_m}")
 
     coef_opt = gauss_solve(form_matrix(x, optimal_m), form_vector(x, y, optimal_m))
